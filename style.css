@@ -127,7 +127,7 @@ section {
 
 section h2 {
   font-family: 'Kalnia', serif;
-  color: var(--primary);
+  color: var(--background);
   margin-bottom: 1.5rem;
   font-size: 2rem;
 }
