@@ -65,11 +65,12 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1603297631954-dbc27f5f9b6f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background: url('assets/hero.jpg') center/cover no-repeat;
   text-align: center;
   position: relative;
   color: #fff;
 }
+
 
 .hero::after {
   content: "";
