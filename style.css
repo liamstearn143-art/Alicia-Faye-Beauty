@@ -219,3 +219,8 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+.site-logo img {
+  height: 60px;   /* adjust as needed */
+  width: auto;
+}
