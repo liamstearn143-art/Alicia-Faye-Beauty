@@ -63,7 +63,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
   background: url('assets/IMG_5474.jpg') center/cover no-repeat;
   text-align: center;
   position: relative;
@@ -241,3 +241,21 @@ footer {
   height: 40px;   /* adjust as needed */
   width: auto;
 }
+
+.hero p {
+  color: #6C8363; /* darker than white */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-icon {
+  width: 90px;          /* adjust size */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
