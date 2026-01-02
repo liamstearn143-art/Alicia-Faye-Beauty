@@ -58,18 +58,35 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Hero */
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('assets/hero.jpg') center/cover no-repeat;
+  background: url('assets/IMG_5474.jpg') center/cover no-repeat;
   text-align: center;
   position: relative;
   color: #fff;
+  overflow: hidden;
 }
+
+/* Hazy overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15); /* light haze */
+  backdrop-filter: blur(2px);            /* subtle softness */
+  z-index: 1;
+}
+
+/* Keep content above overlay */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 
 .hero::after {
