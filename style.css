@@ -254,8 +254,8 @@ footer {
 }
 
 .hero-icon {
-  width: 90px;          /* adjust size */
-  height: auto;
+  width: auto;          /* adjust size */
+  height: 50px;
   margin-bottom: 1rem;
 }
 
