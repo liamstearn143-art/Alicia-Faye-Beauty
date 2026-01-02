@@ -243,7 +243,7 @@ footer {
 }
 
 .hero p {
-  color: #6C8363; /* darker than white */
+  color: #FAFAF8;
 }
 
 .hero-content {
@@ -255,7 +255,7 @@ footer {
 
 .hero-icon {
   width: auto;          /* adjust size */
-  height: 50px;
+  height: 150px;
   margin-bottom: 1rem;
 }
 
