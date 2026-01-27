@@ -134,16 +134,12 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
-/* Sections */
 section {
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 4rem 1rem;
 }
 
-.section-inner {
-  max-width: 1200px;
-  margin: auto;
-}
 
 
 section h2 {
