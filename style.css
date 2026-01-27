@@ -16,6 +16,7 @@ body {
   color: var(--primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  padding-top: 90px;
 }
 
 /* Header */
@@ -150,7 +151,7 @@ nav {
 section {
   max-width: 1200px;
   margin: 0;
-  padding: 0rem
+  padding: 4rem 1rem;
 }
 
 
@@ -179,6 +180,7 @@ section p {
 
 .gallery img {
   width: 100%;
+  height: 50px;
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
