@@ -136,11 +136,15 @@ nav a:hover {
 
 /* Sections */
 section {
-  padding: 1rem 1rem;
-  text-align: center;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.section-inner {
   max-width: 1200px;
   margin: auto;
 }
+
 
 section h2 {
   font-family: 'Kalnia', serif;
