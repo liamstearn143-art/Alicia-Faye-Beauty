@@ -258,11 +258,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-section {
-  margin: 0;
-  padding: 0;
-}
-
 section + section {
   margin-top: 0;
 }
