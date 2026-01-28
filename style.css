@@ -16,7 +16,6 @@ body {
   color: var(--primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
-  padding-top: 90px;
 }
 
 /* Header */
@@ -151,7 +150,6 @@ nav {
 section {
   max-width: 1200px;
   margin: 0;
-  padding: 4rem 1rem;
 }
 
 
