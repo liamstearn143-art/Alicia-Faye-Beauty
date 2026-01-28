@@ -154,7 +154,7 @@ section {
 
 
 .section-inner {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -166,7 +166,7 @@ section h2 {
 }
 
 section p {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0;
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
