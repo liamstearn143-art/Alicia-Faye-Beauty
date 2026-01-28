@@ -76,7 +76,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: 70vh;
   background: url('assets/IMG_5474.jpg') center/cover no-repeat;
   text-align: center;
   position: relative;
@@ -168,6 +168,7 @@ section h2 {
 section p {
   max-width: 1200px;
   margin: 0;
+  margin-bottom: 1.5rem;
   font-size: 1.05rem;
   line-height: 1.6;
   color: #444;
