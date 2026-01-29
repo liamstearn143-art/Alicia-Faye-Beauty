@@ -320,3 +320,7 @@ h2, p {
   outline: none;
   border-color: var(--accent);
 }
+
+.btn-link {
+  text-decoration: none;
+}
