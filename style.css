@@ -9,14 +9,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Josefin Sans', sans-serif;
   background-color: var(--background);
   color: var(--primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 
 /* Header */
 header {
@@ -202,6 +206,7 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
+  margin-top: auto;
 }
 
 /* Mobile Nav */
