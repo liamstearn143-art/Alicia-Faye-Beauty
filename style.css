@@ -284,3 +284,39 @@ h2, p {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
+/* Page offset for fixed header */
+.page-offset {
+  padding-top: 120px;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: var(--primary);
+  gap: 0.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(108, 131, 99, 0.3);
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
