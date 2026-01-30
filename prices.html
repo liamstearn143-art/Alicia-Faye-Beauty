@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Alicia Faye Beauty | Treatments & Prices</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treatments & Prices | Alicia Faye Beauty</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia:wght@100..700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,18 +21,47 @@
       <img src="assets/AFBeauty-WM3_DG.png" alt="Alicia Faye Beauty">
     </h1>
     <nav>
-      <ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<section style="padding-top:140px" class="fade-in">
+<!-- MAIN CONTENT -->
+<section class="fade-in" style="padding-top: 140px;">
   <div class="section-inner">
     <h2>Treatments & Prices</h2>
-    <p>Full price list coming soon.</p>
+    <p>
+      A selection of personalised treatments designed to help you relax,
+      refresh, and feel your best. Full booking details coming soon.
+    </p>
+
+    <div class="price-list">
+      <div class="price-item">
+        <span>Luxury Facial</span>
+        <span>£60</span>
+      </div>
+      <div class="price-item">
+        <span>Relaxing Massage</span>
+        <span>£55</span>
+      </div>
+      <div class="price-item">
+        <span>Nail Treatment</span>
+        <span>£40</span>
+      </div>
+      <div class="price-item">
+        <span>Brow Styling</span>
+        <span>£30</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -32,5 +69,6 @@
   © 2025 Alicia Faye Beauty — All Rights Reserved
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
