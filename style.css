@@ -398,3 +398,40 @@ h2, p {
   font-size: 1.05rem;
   box-shadow: 0 6px 20px rgba(108, 131, 99, 0.08);
 }
+
+/* Prices page layout */
+.prices-page {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+/* Rounded content box */
+.prices-card {
+  background: #ffffff;
+  max-width: 700px;
+  width: 100%;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.prices-card h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Message text */
+.prices-message {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+/* Optional active nav styling */
+nav a.active {
+  opacity: 0.6;
+}
