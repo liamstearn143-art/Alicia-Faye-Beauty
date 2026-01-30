@@ -64,6 +64,7 @@ nav a {
   color: var(--primary);
   font-weight: 500;
   transition: color 0.3s ease;
+  font-family: inherit;
 }
 
 nav a:hover {
@@ -436,6 +437,4 @@ nav a.active {
   opacity: 0.6;
 }
 
-nav a {
-  font-family: inherit;
-}
+
