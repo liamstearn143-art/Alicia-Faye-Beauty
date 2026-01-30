@@ -329,3 +329,54 @@ h2, p {
 .btn-link {
   text-decoration: none;
 }
+
+.offer-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #F3F4F1;
+  padding: 2.5rem 0 3rem;
+  margin-top: -1px;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollSlider 60s linear infinite;
+}
+
+.slide {
+  min-width: 260px;
+  margin: 0 1.5rem;
+  padding: 1.2rem 2rem;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 30px;
+  font-family: 'Kalnia', serif;
+  font-size: 1.1rem;
+  color: var(--primary);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(108, 131, 99, 0.08);
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+/* Button under slider */
+.slider-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Animation */
+@keyframes scrollSlider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
