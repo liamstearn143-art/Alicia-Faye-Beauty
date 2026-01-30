@@ -3,71 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Treatments & Prices | Alicia Faye Beauty</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia:wght@100..700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>Prices | Alicia Faye Beauty</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <div class="header-inner">
-    <h1 class="site-logo">
-      <a href="index.html">
-        <img
-          src="assets/AFBeauty-WM3_DG.png"
-          alt="Alicia Faye Beauty"
-        />
-      </a>
-    </h1>
+  <!-- HEADER (same as other pages) -->
+  <header>
+    <div class="header-inner">
+      <h1 class="site-logo">
+        <a href="index.html">
+          <img src="assets/AFBeauty-WM3_DG.png" alt="Alicia Faye Beauty" />
+        </a>
+      </h1>
 
-    <nav>
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <ul id="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="prices.html">Prices</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-<!-- PAGE CONTENT -->
-<section class="fade-in" style="padding-top: 140px;">
-  <div class="section-inner">
-    <h2>Treatments & Prices</h2>
-
-    <p style="margin-top: 1.5rem;">
-      Our full price list is coming soon.
-    </p>
-
-    <p>
-      For more information about treatments or bookings, please get in touch.
-    </p>
-
-    <div style="margin-top: 2.5rem; text-align: center;">
-      <a href="contact.html" class="btn">Contact Us</a>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="prices.html" class="active">Prices</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer>
-  © 2025 Alicia Faye Beauty — All Rights Reserved
-</footer>
+  <!-- MAIN CONTENT -->
+  <main class="prices-page">
+    <section class="prices-card fade-in">
+      <h2>Price List</h2>
+      <p class="prices-message">
+        Full price list coming soon.<br />
+        For more information or to book, please get in touch.
+      </p>
 
-<script src="script.js"></script>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Alicia Faye Beauty</p>
+  </footer>
+
 </body>
 </html>
 
