@@ -62,9 +62,10 @@ nav ul {
 nav a {
   text-decoration: none;
   color: var(--primary);
-  font-weight: 500;
   transition: color 0.3s ease;
-  font-family: inherit;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 nav a:hover {
