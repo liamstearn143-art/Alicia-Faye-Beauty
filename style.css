@@ -82,12 +82,24 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
+  padding-top: 6rem;
   background: url('assets/IMG_5474.jpg') center/cover no-repeat;
   text-align: center;
   position: relative;
   color: #fff;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding-top: 7rem;
+  }
+
+  .hero-icon {
+    height: 120px; /* optional: slightly smaller */
+  }
 }
 
 /* Hazy overlay */
