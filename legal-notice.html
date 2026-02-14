@@ -16,15 +16,34 @@
 
   <!-- Legal Page Specific Styles -->
   <style>
-    /* Left align headings and paragraphs for this page */
+    /* Base styles for this page */
+    .legal-container {
+      font-family: 'Josefin Sans', sans-serif;
+      color: var(--primary);
+      max-width: 900px;
+      margin: 160px auto 100px auto;
+      padding: 0 24px;
+    }
+
     .legal-container h1,
     .legal-container h2,
     .legal-container h3,
     .legal-container p,
     .legal-container ul {
-      text-align: left;
       color: var(--primary);
       font-family: 'Josefin Sans', sans-serif;
+    }
+
+    /* Center specific headings */
+    .legal-container h1,
+    .legal-container .business-heading {
+      text-align: center;
+    }
+
+    /* Other headings remain left-aligned */
+    .legal-container h2:not(.business-heading),
+    .legal-container h3 {
+      text-align: left;
     }
 
     .legal-container h1 {
@@ -46,6 +65,13 @@
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
       text-transform: none; /* normal capitalization */
+    }
+
+    .legal-container p,
+    .legal-container li {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     .legal-container a {
@@ -105,7 +131,7 @@
   <h1>Legal Notice</h1>
 
   <section>
-    <h2>Business Information</h2>
+    <h2 class="business-heading">Business Information</h2>
     <p><strong>Business Name:</strong> Alicia Faye Beauty</p>
     <p><strong>Registered Office:</strong> 4 Northgate St, Bury Saint Edmunds, IP33 1HG, United Kingdom</p>
     <p><strong>Telephone:</strong> <a href="tel:01284361472">01284 361 472</a></p>
@@ -148,4 +174,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
