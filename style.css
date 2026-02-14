@@ -499,3 +499,18 @@ footer .social-icons a:hover svg {
   color: var(--accent);
 }
 
+/* Contact section Instagram link styling */
+.contact-section a {
+  display: block;           /* makes it act like a block for centering */
+  text-align: center;       /* centers the text */
+  color: var(--accent);     /* your site accent colour */
+  font-weight: 600;         /* optional: slightly bolder */
+  font-size: 1.1rem;        /* optional: slightly bigger */
+  text-decoration: none;    /* remove underline */
+  margin-top: 10px;         /* spacing above the link */
+  transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+  color: var(--primary);    /* changes to primary colour on hover */
+}
