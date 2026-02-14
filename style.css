@@ -174,7 +174,6 @@ section {
 .section-inner {
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
 section h2 {
@@ -182,6 +181,7 @@ section h2 {
   color: var(--primary);
   margin-bottom: 1.5rem;
   font-size: 2rem;
+  text-align: center;
 }
 
 section p {
@@ -191,6 +191,7 @@ section p {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #444;
+  text-align: center;
 }
 
 .gallery {
