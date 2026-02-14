@@ -456,50 +456,26 @@ nav a.active {
   text-align: left;
 }
 
-/* CONTACT PAGE LAYOUT */
-.contact-page .contact-main {
-  padding-top: 120px; /* accounts for fixed header */
+/* Ensure page clears fixed header */
+.contact-main {
+  padding-top: 140px; /* adjust if your header is taller */
   padding-bottom: 4rem;
 }
 
-.contact-section {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
-
-.contact-inner {
+/* Keep text left-aligned for contact page */
+.contact-page .section-inner {
+  text-align: left;
   max-width: 650px;
-  width: 100%;
-}
-
-.contact-inner h2 {
-  margin-bottom: 1rem;
-}
-
-.contact-inner p {
-  margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 /* Mailchimp iframe styling */
-.mailchimp-wrapper {
+.mailchimp-frame {
   width: 100%;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
-  background: #fff;
-}
-
-.mailchimp-wrapper iframe {
-  width: 100%;
-  height: 750px;
+  height: 900px; /* gives enough room */
   border: none;
+  margin-top: 2rem;
+  display: block;
 }
 
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .mailchimp-wrapper iframe {
-    height: 820px;
-  }
-}
 
