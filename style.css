@@ -471,11 +471,11 @@ nav a.active {
 
 /* Mailchimp iframe styling */
 .mailchimp-frame {
+  display: block;
   width: 100%;
-  height: 900px; /* gives enough room */
+  height: 900px;
   border: none;
   margin-top: 2rem;
-  display: block;
 }
 
 
