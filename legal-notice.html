@@ -16,15 +16,68 @@
 
   <!-- Legal Page Overrides -->
   <style>
-    /* Ensure headings follow paragraph alignment for this page */
-    .legal-container h2,
-    .legal-container h3 {
+    /* Fonts & colours consistent with the main site */
+    .legal-container {
+      font-family: 'Josefin Sans', sans-serif;
+      color: var(--primary);
+      max-width: 900px;
+      margin: 160px auto 100px auto;
+      padding: 0 24px;
+    }
+
+    .legal-container h1 {
+      font-family: 'Kalnia', serif;
+      color: var(--primary);
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
       text-align: left;
     }
 
-    /* Remove all caps from h3 headings */
+    .legal-container h2 {
+      font-family: 'Kalnia', serif;
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
     .legal-container h3 {
-      text-transform: none;
+      font-family: 'Kalnia', serif;
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      text-transform: none; /* normal capitalization */
+    }
+
+    .legal-container p,
+    .legal-container li {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .legal-container a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(163, 119, 116, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .legal-container a:hover {
+      color: var(--primary);
+      border-bottom: 1px solid var(--primary);
+    }
+
+    .legal-container ul {
+      padding-left: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .legal-container li {
+      margin-bottom: 0.75rem;
     }
   </style>
 </head>
