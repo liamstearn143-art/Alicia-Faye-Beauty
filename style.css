@@ -478,14 +478,20 @@ nav a.active {
   margin-top: 2rem;
 }
 
+/* Footer Social Icons */
 footer .social-icons {
   margin-top: 10px;
 }
 
+footer .social-icons a {
+  display: inline-block;
+  line-height: 0;
+}
+
 footer .social-icons a svg {
-  width: 24px;
-  height: 24px;
-  color: var(--accent); /* matches your site accent color */
+  width: 28px;       /* ensures it isn’t cut off */
+  height: 28px;
+  color: var(--accent);  /* your site accent color */
   transition: color 0.3s ease;
 }
 
