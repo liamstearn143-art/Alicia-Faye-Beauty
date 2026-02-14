@@ -177,6 +177,8 @@ section {
 }
 
 .section-inner-button-only {
+  width: 100%;
+  padding: 2rem 1rem;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
