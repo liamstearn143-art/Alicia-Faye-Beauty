@@ -350,6 +350,78 @@ h2, p {
   border-color: var(--accent);
 }
 
+/* ===============================
+   CONTACT SPLIT LAYOUT
+================================== */
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-left,
+.contact-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-left h2,
+.contact-right h3 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact-left p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* Map Styling */
+.map-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(108, 131, 99, 0.08);
+  margin-bottom: 2rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Contact details */
+.contact-details p {
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #444;
+}
+
+.contact-details a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+
 .btn-link {
   text-decoration: none;
 }
