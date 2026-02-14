@@ -176,6 +176,12 @@ section {
   margin: 0 auto;
 }
 
+.section-inner-button-only {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 section h2 {
   font-family: 'Kalnia', serif;
   color: var(--primary);
