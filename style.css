@@ -350,9 +350,6 @@ h2, p {
   border-color: var(--accent);
 }
 
-/* ===============================
-   CONTACT SPLIT LAYOUT
-================================== */
 
 /* ===============================
    CONTACT PAGE LAYOUT
@@ -399,6 +396,7 @@ h2, p {
 .contact-right {
   flex: 1;
   min-width: 0;
+  padding-top: 105px;
 }
 
 /* Map */
