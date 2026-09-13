@@ -12,89 +12,60 @@
   <link rel="shortcut icon" href="assets/AFBeauty-Icon-Fill_B.png">
 
   <style>
-    /* ---------------------------------------------------
-       Price list table styles
-       To edit prices: find the row for the service below
-       and change the text inside the two <td> tags.
-       To add a service: copy a whole <tr>...</tr> line
-       and edit the text.
-       To add a new category: copy a whole
-       <div class="price-group">...</div> block.
-    --------------------------------------------------- */
-    .prices-page {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
-    }
+    /* =====================================================
+       Extra rules for the price list page only.
+       Deliberately new, unique class names (afb-price-*)
+       so nothing here collides with existing rules in
+       style.css (the old bug was reusing ".prices-page",
+       which style.css already defines for something else).
 
-    .price-list-heading {
-      font-family: "Kalnia", serif;
+       This reuses your site's existing .price-list and
+       .price-item classes for the actual rows — those are
+       already styled in style.css to match the rest of the
+       site (rounded translucent cards, same shadow as your
+       testimonial slider and contact details box).
+
+       TO EDIT A PRICE: find the row, change the text inside
+       the two spans.
+       TO ADD A SERVICE: copy a whole .price-item div.
+       TO ADD A CATEGORY: copy a whole .afb-price-group block.
+    ===================================================== */
+    .afb-price-intro {
+      max-width: 650px;
+      margin: 0 auto 3rem;
       text-align: center;
-      font-size: 2.4rem;
-      color: #A97C74;
-      margin-bottom: 0.5rem;
+      color: #444;
+      line-height: 1.6;
     }
 
-    .price-list-intro {
-      text-align: center;
-      font-family: "Josefin Sans", sans-serif;
-      color: #4a4a4a;
-      margin-bottom: 2.5rem;
+    .afb-price-group {
+      margin-bottom: 3rem;
     }
 
-    .price-group {
-      margin-bottom: 2.75rem;
-    }
-
-    .price-group h3 {
-      font-family: "Kalnia", serif;
-      color: #A97C74;
+    .afb-price-group h3 {
+      color: var(--accent);
       font-size: 1.4rem;
-      border-bottom: 1px solid #d9c7b8;
-      padding-bottom: 0.4rem;
-      margin-bottom: 0.5rem;
+      text-align: center;
+      margin-bottom: 0.25rem;
     }
 
-    .price-group .group-note {
-      font-family: "Josefin Sans", sans-serif;
-      color: #A97C74;
-      font-style: italic;
-      font-size: 0.95rem;
-      margin: 0 0 0.75rem;
-    }
-
-    .price-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 1rem;
-      color: #2b2b2b;
-    }
-
-    .price-table tr {
-      border-bottom: 1px dotted #e2d6c8;
-    }
-
-    .price-table td {
-      padding: 0.5rem 0.25rem;
-      vertical-align: top;
-    }
-
-    .price-table td.service-name {
-      width: 75%;
-    }
-
-    .price-table td.service-price {
-      width: 25%;
-      text-align: right;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-
-    .prices-page .btn {
+    .afb-price-group-note {
       display: block;
-      width: fit-content;
-      margin: 2rem auto 0;
+      text-align: center;
+      color: var(--accent);
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Keep the price/name from crowding on narrow screens */
+    .price-item {
+      gap: 1rem;
+    }
+
+    .price-item span:last-child {
+      font-weight: 600;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -125,100 +96,105 @@
   </header>
 
   <!-- MAIN -->
-  <main class="prices-page fade-in">
+  <main class="page-offset">
+    <section class="fade-in">
+      <div class="section-inner">
+        <h2>Price List</h2>
+        <p class="afb-price-intro">All treatments below, at a glance. Get in touch if you have any questions or would like to book.</p>
 
-    <h2 class="price-list-heading">Price List</h2>
-    <p class="price-list-intro">All treatments below, at a glance. Get in touch if you have any questions or would like to book.</p>
+        <!-- Manicures & Pedicures -->
+        <div class="afb-price-group">
+          <h3>Manicures &amp; Pedicures</h3>
+          <div class="price-list">
+            <div class="price-item"><span>File &amp; Polish</span><span>£20.00</span></div>
+            <div class="price-item"><span>Signature Manicure</span><span>£30.00</span></div>
+            <div class="price-item"><span>Luxury Manicure</span><span>£38.00</span></div>
+            <div class="price-item"><span>Gels on Fingers / Toes</span><span>£36.00</span></div>
+            <div class="price-item"><span>Gel Soak Off &amp; Reapply (Toes &amp; Fingers)</span><span>£43.00</span></div>
+            <div class="price-item"><span>Signature Pedicure</span><span>£38.00</span></div>
+            <div class="price-item"><span>Signature Pedicure with Gels</span><span>£48.00</span></div>
+            <div class="price-item"><span>Signature Pedicure with Gels &amp; Soak Off</span><span>£53.00</span></div>
+            <div class="price-item"><span>Signature Pedicure with Soak Off</span><span>£46.00</span></div>
+            <div class="price-item"><span>Luxury Pedicure</span><span>£45.00</span></div>
+            <div class="price-item"><span>Luxury Pedicure with Gels</span><span>£55.00</span></div>
+            <div class="price-item"><span>Luxury Pedicure with Gels &amp; Soak Off</span><span>£60.00</span></div>
+            <div class="price-item"><span>Luxury Pedicure with Soak Off</span><span>£53.00</span></div>
+            <div class="price-item"><span>Gel Soak Off</span><span>£20.00</span></div>
+            <div class="price-item"><span>Builder Gel</span><span>Starting from £38.00</span></div>
+          </div>
+        </div>
 
-    <!-- Manicures & Pedicures -->
-    <div class="price-group">
-      <h3>Manicures &amp; Pedicures</h3>
-      <table class="price-table">
-        <tr><td class="service-name">File &amp; Polish</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Signature Manicure</td><td class="service-price">£30.00</td></tr>
-        <tr><td class="service-name">Luxury Manicure</td><td class="service-price">£38.00</td></tr>
-        <tr><td class="service-name">Gels on Fingers / Toes</td><td class="service-price">£36.00</td></tr>
-        <tr><td class="service-name">Gel Soak Off &amp; Reapply (Toes &amp; Fingers)</td><td class="service-price">£43.00</td></tr>
-        <tr><td class="service-name">Signature Pedicure</td><td class="service-price">£38.00</td></tr>
-        <tr><td class="service-name">Signature Pedicure with Gels</td><td class="service-price">£48.00</td></tr>
-        <tr><td class="service-name">Signature Pedicure with Gels &amp; Soak Off</td><td class="service-price">£53.00</td></tr>
-        <tr><td class="service-name">Signature Pedicure with Soak Off</td><td class="service-price">£46.00</td></tr>
-        <tr><td class="service-name">Luxury Pedicure</td><td class="service-price">£45.00</td></tr>
-        <tr><td class="service-name">Luxury Pedicure with Gels</td><td class="service-price">£55.00</td></tr>
-        <tr><td class="service-name">Luxury Pedicure with Gels &amp; Soak Off</td><td class="service-price">£60.00</td></tr>
-        <tr><td class="service-name">Luxury Pedicure with Soak Off</td><td class="service-price">£53.00</td></tr>
-        <tr><td class="service-name">Gel Soak Off</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Builder Gel</td><td class="service-price">Starting from £38.00</td></tr>
-      </table>
-    </div>
+        <!-- Waxing -->
+        <div class="afb-price-group">
+          <h3>Waxing</h3>
+          <div class="price-list">
+            <div class="price-item"><span>Back or Chest</span><span>£30.00</span></div>
+            <div class="price-item"><span>Bikini Line</span><span>£20.00</span></div>
+            <div class="price-item"><span>Brazilian</span><span>£35.00</span></div>
+            <div class="price-item"><span>Eyebrow</span><span>£15.00</span></div>
+            <div class="price-item"><span>Forearm</span><span>£20.00</span></div>
+            <div class="price-item"><span>Full Face</span><span>£30.00</span></div>
+            <div class="price-item"><span>Full Leg</span><span>£35.00</span></div>
+            <div class="price-item"><span>Full Leg (inc. Bikini)</span><span>£45.00</span></div>
+            <div class="price-item"><span>Half Leg</span><span>£25.00</span></div>
+            <div class="price-item"><span>Half Leg (inc. Bikini)</span><span>£35.00</span></div>
+            <div class="price-item"><span>High Bikini</span><span>£25.00</span></div>
+            <div class="price-item"><span>Hollywood</span><span>£40.00</span></div>
+            <div class="price-item"><span>Lip &amp; Chin</span><span>£20.00</span></div>
+            <div class="price-item"><span>Lip or Chin</span><span>£15.00</span></div>
+            <div class="price-item"><span>Underarm</span><span>£18.00</span></div>
+          </div>
+        </div>
 
-    <!-- Waxing -->
-    <div class="price-group">
-      <h3>Waxing</h3>
-      <table class="price-table">
-        <tr><td class="service-name">Back or Chest</td><td class="service-price">£30.00</td></tr>
-        <tr><td class="service-name">Bikini Line</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Brazilian</td><td class="service-price">£35.00</td></tr>
-        <tr><td class="service-name">Eyebrow</td><td class="service-price">£15.00</td></tr>
-        <tr><td class="service-name">Forearm</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Full Face</td><td class="service-price">£30.00</td></tr>
-        <tr><td class="service-name">Full Leg</td><td class="service-price">£35.00</td></tr>
-        <tr><td class="service-name">Full Leg (inc. Bikini)</td><td class="service-price">£45.00</td></tr>
-        <tr><td class="service-name">Half Leg</td><td class="service-price">£25.00</td></tr>
-        <tr><td class="service-name">Half Leg (inc. Bikini)</td><td class="service-price">£35.00</td></tr>
-        <tr><td class="service-name">High Bikini</td><td class="service-price">£25.00</td></tr>
-        <tr><td class="service-name">Hollywood</td><td class="service-price">£40.00</td></tr>
-        <tr><td class="service-name">Lip &amp; Chin</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Lip or Chin</td><td class="service-price">£15.00</td></tr>
-        <tr><td class="service-name">Underarm</td><td class="service-price">£18.00</td></tr>
-      </table>
-    </div>
+        <!-- Threading -->
+        <div class="afb-price-group">
+          <h3>Threading</h3>
+          <div class="price-list">
+            <div class="price-item"><span>Brows</span><span>£12.00</span></div>
+            <div class="price-item"><span>Cheeks / Side of Face</span><span>£20.00</span></div>
+            <div class="price-item"><span>Lip or Chin</span><span>£12.00</span></div>
+            <div class="price-item"><span>Full Face</span><span>£25.00</span></div>
+            <div class="price-item"><span>Lip &amp; Chin</span><span>£15.00</span></div>
+          </div>
+        </div>
 
-    <!-- Threading -->
-    <div class="price-group">
-      <h3>Threading</h3>
-      <table class="price-table">
-        <tr><td class="service-name">Brows</td><td class="service-price">£12.00</td></tr>
-        <tr><td class="service-name">Cheeks / Side of Face</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Lip or Chin</td><td class="service-price">£12.00</td></tr>
-        <tr><td class="service-name">Full Face</td><td class="service-price">£25.00</td></tr>
-        <tr><td class="service-name">Lip &amp; Chin</td><td class="service-price">£15.00</td></tr>
-      </table>
-    </div>
+        <!-- Massage & Facials / Peels -->
+        <div class="afb-price-group">
+          <h3>Massage &amp; Facials / Peels</h3>
+          <div class="price-list">
+            <div class="price-item"><span>30 Minutes</span><span>£35.00</span></div>
+            <div class="price-item"><span>45 Minutes</span><span>£50.00</span></div>
+            <div class="price-item"><span>60 Minutes</span><span>£65.00</span></div>
+            <div class="price-item"><span>90 Minutes</span><span>£95.00</span></div>
+            <div class="price-item"><span>Express Facial</span><span>£50.00</span></div>
+            <div class="price-item"><span>Signature Facial</span><span>£70.00</span></div>
+            <div class="price-item"><span>Prime &amp; Peel add on</span><span>£25.00</span></div>
+            <div class="price-item"><span>Express Prime &amp; Peel</span><span>£30.00</span></div>
+            <div class="price-item"><span>Prime &amp; Peel</span><span>£60.00</span></div>
+            <div class="price-item"><span>Microneedle</span><span>£80.00</span></div>
+          </div>
+        </div>
 
-    <!-- Massage & Facials / Peels -->
-    <div class="price-group">
-      <h3>Massage &amp; Facials / Peels</h3>
-      <table class="price-table">
-        <tr><td class="service-name">30 Minutes</td><td class="service-price">£35.00</td></tr>
-        <tr><td class="service-name">45 Minutes</td><td class="service-price">£50.00</td></tr>
-        <tr><td class="service-name">60 Minutes</td><td class="service-price">£65.00</td></tr>
-        <tr><td class="service-name">90 Minutes</td><td class="service-price">£95.00</td></tr>
-        <tr><td class="service-name">Express Facial</td><td class="service-price">£50.00</td></tr>
-        <tr><td class="service-name">Signature Facial</td><td class="service-price">£70.00</td></tr>
-        <tr><td class="service-name">Prime &amp; Peel add on</td><td class="service-price">£25.00</td></tr>
-        <tr><td class="service-name">Express Prime &amp; Peel</td><td class="service-price">£30.00</td></tr>
-        <tr><td class="service-name">Prime &amp; Peel</td><td class="service-price">£60.00</td></tr>
-        <tr><td class="service-name">Microneedle</td><td class="service-price">£80.00</td></tr>
-      </table>
-    </div>
+        <!-- Lashes & Brows -->
+        <div class="afb-price-group">
+          <h3>Lashes &amp; Brows</h3>
+          <span class="afb-price-group-note">Tinting requires a patch test 48hrs prior to treatment.</span>
+          <div class="price-list">
+            <div class="price-item"><span>Brow Wax &amp; Tint</span><span>£20.00</span></div>
+            <div class="price-item"><span>Eyebrow Tint</span><span>£15.00</span></div>
+            <div class="price-item"><span>Lash Tint</span><span>£20.00</span></div>
+            <div class="price-item"><span>Lash &amp; Brow Tint</span><span>£25.00</span></div>
+            <div class="price-item"><span>Lash &amp; Brow Tint with Brow Wax</span><span>£30.00</span></div>
+            <div class="price-item"><span>Lash Lift (inc Brow Wax &amp; Tint)</span><span>£55.00</span></div>
+          </div>
+        </div>
 
-    <!-- Lashes & Brows -->
-    <div class="price-group">
-      <h3>Lashes &amp; Brows</h3>
-      <p class="group-note">Tinting requires a patch test 48hrs prior to treatment.</p>
-      <table class="price-table">
-        <tr><td class="service-name">Brow Wax &amp; Tint</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Eyebrow Tint</td><td class="service-price">£15.00</td></tr>
-        <tr><td class="service-name">Lash Tint</td><td class="service-price">£20.00</td></tr>
-        <tr><td class="service-name">Lash &amp; Brow Tint</td><td class="service-price">£25.00</td></tr>
-        <tr><td class="service-name">Lash &amp; Brow Tint with Brow Wax</td><td class="service-price">£30.00</td></tr>
-        <tr><td class="service-name">Lash Lift (inc Brow Wax &amp; Tint)</td><td class="service-price">£55.00</td></tr>
-      </table>
-    </div>
+        <div class="section-inner-button-only">
+          <a href="contact.html" class="btn btn-link">Contact Us</a>
+        </div>
 
-    <a href="contact.html" class="btn">Contact Us</a>
-
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
