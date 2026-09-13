@@ -22,7 +22,7 @@
        <div class="price-group">...</div> block.
     --------------------------------------------------- */
     .prices-page {
-      max-width: 900px;
+      max-width: 640px;
       margin: 0 auto;
       padding: 3rem 1.5rem 5rem;
     }
@@ -91,19 +91,6 @@
       font-weight: 600;
     }
 
-    /* Two categories side-by-side on wider screens */
-    .price-columns {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0 3rem;
-    }
-
-    @media (min-width: 700px) {
-      .price-columns.two-col {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
     .prices-page .btn {
       display: block;
       width: fit-content;
@@ -146,108 +133,88 @@
     <!-- Manicures & Pedicures -->
     <div class="price-group">
       <h3>Manicures &amp; Pedicures</h3>
-      <div class="price-columns two-col">
-        <table class="price-table">
-          <tr><td class="service-name">File &amp; Polish</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Signature Manicure</td><td class="service-price">£30.00</td></tr>
-          <tr><td class="service-name">Luxury Manicure</td><td class="service-price">£38.00</td></tr>
-          <tr><td class="service-name">Gels on Fingers / Toes</td><td class="service-price">£36.00</td></tr>
-          <tr><td class="service-name">Gel Soak Off &amp; Reapply (Toes &amp; Fingers)</td><td class="service-price">£43.00</td></tr>
-          <tr><td class="service-name">Signature Pedicure</td><td class="service-price">£38.00</td></tr>
-          <tr><td class="service-name">Signature Pedicure with Gels</td><td class="service-price">£48.00</td></tr>
-          <tr><td class="service-name">Signature Pedicure with Gels &amp; Soak Off</td><td class="service-price">£53.00</td></tr>
-          <tr><td class="service-name">Signature Pedicure with Soak Off</td><td class="service-price">£46.00</td></tr>
-        </table>
-        <table class="price-table">
-          <tr><td class="service-name">Luxury Pedicure</td><td class="service-price">£45.00</td></tr>
-          <tr><td class="service-name">Luxury Pedicure with Gels</td><td class="service-price">£55.00</td></tr>
-          <tr><td class="service-name">Luxury Pedicure with Gels &amp; Soak Off</td><td class="service-price">£60.00</td></tr>
-          <tr><td class="service-name">Luxury Pedicure with Soak Off</td><td class="service-price">£53.00</td></tr>
-          <tr><td class="service-name">Gel Soak Off</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Builder Gel</td><td class="service-price">Starting from £38.00</td></tr>
-        </table>
-      </div>
+      <table class="price-table">
+        <tr><td class="service-name">File &amp; Polish</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Signature Manicure</td><td class="service-price">£30.00</td></tr>
+        <tr><td class="service-name">Luxury Manicure</td><td class="service-price">£38.00</td></tr>
+        <tr><td class="service-name">Gels on Fingers / Toes</td><td class="service-price">£36.00</td></tr>
+        <tr><td class="service-name">Gel Soak Off &amp; Reapply (Toes &amp; Fingers)</td><td class="service-price">£43.00</td></tr>
+        <tr><td class="service-name">Signature Pedicure</td><td class="service-price">£38.00</td></tr>
+        <tr><td class="service-name">Signature Pedicure with Gels</td><td class="service-price">£48.00</td></tr>
+        <tr><td class="service-name">Signature Pedicure with Gels &amp; Soak Off</td><td class="service-price">£53.00</td></tr>
+        <tr><td class="service-name">Signature Pedicure with Soak Off</td><td class="service-price">£46.00</td></tr>
+        <tr><td class="service-name">Luxury Pedicure</td><td class="service-price">£45.00</td></tr>
+        <tr><td class="service-name">Luxury Pedicure with Gels</td><td class="service-price">£55.00</td></tr>
+        <tr><td class="service-name">Luxury Pedicure with Gels &amp; Soak Off</td><td class="service-price">£60.00</td></tr>
+        <tr><td class="service-name">Luxury Pedicure with Soak Off</td><td class="service-price">£53.00</td></tr>
+        <tr><td class="service-name">Gel Soak Off</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Builder Gel</td><td class="service-price">Starting from £38.00</td></tr>
+      </table>
     </div>
 
     <!-- Waxing -->
     <div class="price-group">
       <h3>Waxing</h3>
-      <div class="price-columns two-col">
-        <table class="price-table">
-          <tr><td class="service-name">Back or Chest</td><td class="service-price">£30.00</td></tr>
-          <tr><td class="service-name">Bikini Line</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Brazilian</td><td class="service-price">£35.00</td></tr>
-          <tr><td class="service-name">Eyebrow</td><td class="service-price">£15.00</td></tr>
-          <tr><td class="service-name">Forearm</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Full Face</td><td class="service-price">£30.00</td></tr>
-          <tr><td class="service-name">Full Leg</td><td class="service-price">£35.00</td></tr>
-          <tr><td class="service-name">Full Leg (inc. Bikini)</td><td class="service-price">£45.00</td></tr>
-          <tr><td class="service-name">Half Leg</td><td class="service-price">£25.00</td></tr>
-          <tr><td class="service-name">Half Leg (inc. Bikini)</td><td class="service-price">£35.00</td></tr>
-        </table>
-        <table class="price-table">
-          <tr><td class="service-name">High Bikini</td><td class="service-price">£25.00</td></tr>
-          <tr><td class="service-name">Hollywood</td><td class="service-price">£40.00</td></tr>
-          <tr><td class="service-name">Lip &amp; Chin</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Lip or Chin</td><td class="service-price">£15.00</td></tr>
-          <tr><td class="service-name">Underarm</td><td class="service-price">£18.00</td></tr>
-        </table>
-      </div>
+      <table class="price-table">
+        <tr><td class="service-name">Back or Chest</td><td class="service-price">£30.00</td></tr>
+        <tr><td class="service-name">Bikini Line</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Brazilian</td><td class="service-price">£35.00</td></tr>
+        <tr><td class="service-name">Eyebrow</td><td class="service-price">£15.00</td></tr>
+        <tr><td class="service-name">Forearm</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Full Face</td><td class="service-price">£30.00</td></tr>
+        <tr><td class="service-name">Full Leg</td><td class="service-price">£35.00</td></tr>
+        <tr><td class="service-name">Full Leg (inc. Bikini)</td><td class="service-price">£45.00</td></tr>
+        <tr><td class="service-name">Half Leg</td><td class="service-price">£25.00</td></tr>
+        <tr><td class="service-name">Half Leg (inc. Bikini)</td><td class="service-price">£35.00</td></tr>
+        <tr><td class="service-name">High Bikini</td><td class="service-price">£25.00</td></tr>
+        <tr><td class="service-name">Hollywood</td><td class="service-price">£40.00</td></tr>
+        <tr><td class="service-name">Lip &amp; Chin</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Lip or Chin</td><td class="service-price">£15.00</td></tr>
+        <tr><td class="service-name">Underarm</td><td class="service-price">£18.00</td></tr>
+      </table>
     </div>
 
     <!-- Threading -->
     <div class="price-group">
       <h3>Threading</h3>
-      <div class="price-columns two-col">
-        <table class="price-table">
-          <tr><td class="service-name">Brows</td><td class="service-price">£12.00</td></tr>
-          <tr><td class="service-name">Cheeks / Side of Face</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Lip or Chin</td><td class="service-price">£12.00</td></tr>
-        </table>
-        <table class="price-table">
-          <tr><td class="service-name">Full Face</td><td class="service-price">£25.00</td></tr>
-          <tr><td class="service-name">Lip &amp; Chin</td><td class="service-price">£15.00</td></tr>
-        </table>
-      </div>
+      <table class="price-table">
+        <tr><td class="service-name">Brows</td><td class="service-price">£12.00</td></tr>
+        <tr><td class="service-name">Cheeks / Side of Face</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Lip or Chin</td><td class="service-price">£12.00</td></tr>
+        <tr><td class="service-name">Full Face</td><td class="service-price">£25.00</td></tr>
+        <tr><td class="service-name">Lip &amp; Chin</td><td class="service-price">£15.00</td></tr>
+      </table>
     </div>
 
     <!-- Massage & Facials / Peels -->
     <div class="price-group">
       <h3>Massage &amp; Facials / Peels</h3>
-      <div class="price-columns two-col">
-        <table class="price-table">
-          <tr><td class="service-name">30 Minutes</td><td class="service-price">£35.00</td></tr>
-          <tr><td class="service-name">45 Minutes</td><td class="service-price">£50.00</td></tr>
-          <tr><td class="service-name">60 Minutes</td><td class="service-price">£65.00</td></tr>
-          <tr><td class="service-name">90 Minutes</td><td class="service-price">£95.00</td></tr>
-          <tr><td class="service-name">Express Facial</td><td class="service-price">£50.00</td></tr>
-          <tr><td class="service-name">Signature Facial</td><td class="service-price">£70.00</td></tr>
-        </table>
-        <table class="price-table">
-          <tr><td class="service-name">Prime &amp; Peel add on</td><td class="service-price">£25.00</td></tr>
-          <tr><td class="service-name">Express Prime &amp; Peel</td><td class="service-price">£30.00</td></tr>
-          <tr><td class="service-name">Prime &amp; Peel</td><td class="service-price">£60.00</td></tr>
-          <tr><td class="service-name">Microneedle</td><td class="service-price">£80.00</td></tr>
-        </table>
-      </div>
+      <table class="price-table">
+        <tr><td class="service-name">30 Minutes</td><td class="service-price">£35.00</td></tr>
+        <tr><td class="service-name">45 Minutes</td><td class="service-price">£50.00</td></tr>
+        <tr><td class="service-name">60 Minutes</td><td class="service-price">£65.00</td></tr>
+        <tr><td class="service-name">90 Minutes</td><td class="service-price">£95.00</td></tr>
+        <tr><td class="service-name">Express Facial</td><td class="service-price">£50.00</td></tr>
+        <tr><td class="service-name">Signature Facial</td><td class="service-price">£70.00</td></tr>
+        <tr><td class="service-name">Prime &amp; Peel add on</td><td class="service-price">£25.00</td></tr>
+        <tr><td class="service-name">Express Prime &amp; Peel</td><td class="service-price">£30.00</td></tr>
+        <tr><td class="service-name">Prime &amp; Peel</td><td class="service-price">£60.00</td></tr>
+        <tr><td class="service-name">Microneedle</td><td class="service-price">£80.00</td></tr>
+      </table>
     </div>
 
     <!-- Lashes & Brows -->
     <div class="price-group">
       <h3>Lashes &amp; Brows</h3>
       <p class="group-note">Tinting requires a patch test 48hrs prior to treatment.</p>
-      <div class="price-columns two-col">
-        <table class="price-table">
-          <tr><td class="service-name">Brow Wax &amp; Tint</td><td class="service-price">£20.00</td></tr>
-          <tr><td class="service-name">Eyebrow Tint</td><td class="service-price">£15.00</td></tr>
-          <tr><td class="service-name">Lash Tint</td><td class="service-price">£20.00</td></tr>
-        </table>
-        <table class="price-table">
-          <tr><td class="service-name">Lash &amp; Brow Tint</td><td class="service-price">£25.00</td></tr>
-          <tr><td class="service-name">Lash &amp; Brow Tint with Brow Wax</td><td class="service-price">£30.00</td></tr>
-          <tr><td class="service-name">Lash Lift (inc Brow Wax &amp; Tint)</td><td class="service-price">£55.00</td></tr>
-        </table>
-      </div>
+      <table class="price-table">
+        <tr><td class="service-name">Brow Wax &amp; Tint</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Eyebrow Tint</td><td class="service-price">£15.00</td></tr>
+        <tr><td class="service-name">Lash Tint</td><td class="service-price">£20.00</td></tr>
+        <tr><td class="service-name">Lash &amp; Brow Tint</td><td class="service-price">£25.00</td></tr>
+        <tr><td class="service-name">Lash &amp; Brow Tint with Brow Wax</td><td class="service-price">£30.00</td></tr>
+        <tr><td class="service-name">Lash Lift (inc Brow Wax &amp; Tint)</td><td class="service-price">£55.00</td></tr>
+      </table>
     </div>
 
     <a href="contact.html" class="btn">Contact Us</a>
