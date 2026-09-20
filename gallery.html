@@ -208,12 +208,13 @@
     font-size: 1.05rem;
   }
 
-  /* Grid — a light masonry feel via variable row spans,
-     falls back to a clean even grid on narrow screens */
+  /* Grid — fixed-ratio cards so every tile is a
+     consistent, sensible height. Change --card-ratio
+     below to make all cards taller/shorter/squarer. */
   .gallery-grid {
+    --card-ratio: 4 / 3;   /* width / height — try 1/1 for square, 16/10 for shorter */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-auto-rows: 12px;
     gap: 1.25rem;
   }
 
@@ -222,8 +223,15 @@
     overflow: hidden;
     border-radius: 15px;
     cursor: pointer;
+    aspect-ratio: var(--card-ratio);
     box-shadow: 0 6px 20px rgba(108, 131, 99, 0.08);
     transition: opacity 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Items marked tall: true use a slightly taller ratio
+     instead of the grid default */
+  .gallery-item.tall {
+    aspect-ratio: 3 / 4;
   }
 
   .gallery-item img {
@@ -471,14 +479,10 @@ const GALLERY_IMAGES = [
     grid.innerHTML = '';
     GALLERY_IMAGES.forEach((imgData, i) => {
       const item = document.createElement('div');
-      item.className = 'gallery-item';
+      item.className = 'gallery-item' + (imgData.tall ? ' tall' : '');
       item.tabIndex = 0;
       item.setAttribute('role', 'button');
       item.setAttribute('aria-label', 'View ' + imgData.caption);
-
-      // approximate row-span for a light masonry look
-      const spanRows = imgData.tall ? 34 : 22;
-      item.style.gridRowEnd = 'span ' + spanRows;
 
       item.innerHTML =
         '<img src="' + imgData.src + '" alt="' + imgData.alt + '" loading="lazy" />' +
