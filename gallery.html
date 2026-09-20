@@ -208,14 +208,21 @@
     font-size: 1.05rem;
   }
 
-  /* Grid — fixed-ratio cards so every tile is a
-     consistent, sensible height. Change --card-ratio
-     below to make all cards taller/shorter/squarer. */
+  /* Grid — column-based masonry. Items flow into whichever
+     column has room next, so mixed card heights (see .tall
+     below) never leave empty gaps the way a strict grid would. */
   .gallery-grid {
     --card-ratio: 4 / 3;   /* width / height — try 1/1 for square, 16/10 for shorter */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.25rem;
+    column-count: 3;
+    column-gap: 1.25rem;
+  }
+
+  @media (max-width: 900px) {
+    .gallery-grid { column-count: 2; }
+  }
+
+  @media (max-width: 520px) {
+    .gallery-grid { column-count: 1; }
   }
 
   .gallery-item {
@@ -224,6 +231,8 @@
     border-radius: 15px;
     cursor: pointer;
     aspect-ratio: var(--card-ratio);
+    break-inside: avoid;
+    margin-bottom: 1.25rem;
     box-shadow: 0 6px 20px rgba(108, 131, 99, 0.08);
     transition: opacity 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -431,37 +440,76 @@
 ========================================================= */
 const GALLERY_IMAGES = [
   {
-    src: "assets/facial.jpg",
-    alt: "Facial treatment in progress",
-    caption: "Signature Facial",
-    tall: true
+    src: "assets/eyes-1.png",
+    alt: "Lash Lift & Tint",
+    caption: "Lash Lift & Tint",
   },
   {
-    src: "assets/nail-closeup.jpg",
-    alt: "Close up of a finished manicure",
-    caption: "Manicure & Pedicure"
+    src: "assets/nails-3.JPG",
+    alt: "Floral Nail Art",
+    caption: "Floral Nail Art",
   },
   {
-    src: "assets/massage-products-1.jpg",
-    alt: "Massage oils and products laid out",
-    caption: "Relaxing Massage",
-    tall: true
+    src: "assets/nails-9.JPG",
+    alt: "Green Glitter Gels",
+    caption: "Green Glitter Gels",
   },
   {
-    src: "assets/facial.jpg",
-    alt: "Brow styling detail",
-    caption: "Brow Styling"
+    src: "assets/room-1.JPG",
+    alt: "Room Photo",
+    caption: "Calming Room & Bed",
   },
   {
-    src: "assets/nail-closeup.jpg",
-    alt: "Lash enhancement result",
-    caption: "Lash Enhancements"
+    src: "assets/room-1.JPG",
+    alt: "Room Photo",
+    caption: "Calming Room & Bed",
   },
   {
-    src: "assets/massage-products-1.jpg",
-    alt: "Microneedling treatment setup",
-    caption: "Microneedling"
+    src: "assets/eyes-3.png",
+    alt: "Lashes & Brows",
+    caption: "Lash & Brow Tint, with a Brow Wax",
+  },
+  {
+    src: "assets/nails-7.JPG",
+    alt: "Blue Polka Dot Nails",
+    caption: "Blue Polka Dot Nails",
+  },
+  {
+    src: "assets/nails-12.JPG",
+    alt: "Pink French Tip Nails",
+    caption: "Pink French Tip with Chrome Finish",
+  },
+  {
+    src: "assets/toes-1.JPG",
+    alt: "Glittery Blue Toes",
+    caption: "Glittery Blue Toes",
+  },
+  {
+    src: "assets/room-3.JPG",
+    alt: "Massage Room & Bed",
+    caption: "Massage Room & Bed Setup",
+  },
+  {
+    src: "assets/eyes-2.JPG",
+    alt: "Lash Lift & Tint",
+    caption: "Lash Lift & Tint",
+  },
+  {
+    src: "assets/underarm-1.JPG",
+    alt: "Underarm Wax Before & After",
+    caption: "Underarm Wax",
+  },
+  {
+    src: "assets/nails-5.JPG",
+    alt: "Spring Nail Art with Bees & Flowers",
+    caption: "Spring Nail Art",
+  },
+  {
+    src: "assets/nails-10.JPG",
+    alt: "Burgundy and White Nail Art with stars",
+    caption: "Burgundy and White Nail Art",
   }
+
 ];
 
 /* =========================================================
