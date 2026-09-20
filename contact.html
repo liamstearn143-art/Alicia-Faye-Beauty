@@ -63,11 +63,43 @@
         please use the form below and I’ll respond as soon as possible.
       </p>
 
-      <iframe
-        class="mailchimp-frame"
-        src="https://us11.list-manage.com/contact-form?u=8b52af3ff7398fd2fd89eec66&form_id=bcc028b3f7f26c5b372cea7d5e0e042e"
-        loading="lazy">
-      </iframe>
+      <form class="contact-form" id="contactForm">
+  <label>
+    Name
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
+
+  <label>
+    Message
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const email = this.email.value;
+    const message = this.message.value;
+
+    const subject = encodeURIComponent('Enquiry from ' + name);
+    const body = encodeURIComponent(
+      message + '\n\n— ' + name + ' (' + email + ')'
+    );
+
+    window.location.href =
+      'mailto:aliciafaye_beauty@hotmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+      
     </div>
 
     <!-- RIGHT SIDE -->
